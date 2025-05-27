@@ -1,0 +1,191 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Website CSS */
+
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('/CascadiaCode.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Roboto-Regular.ttf');
+}
+
+body
+{
+	background-image: url("/bg.jpg");
+	background-color: black;
+	font-family: Roboto, sans-serif;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	color: white;
+    font-family: 'Roboto';
+}
+
+main
+{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+h1
+{
+	color: #33b5e5;
+	font-weight: bold;
+	text-align: center;
+    font-size: 2.25em;
+    line-height: 1.25em;
+    margin-top: 0.3em;
+    font-family: "Cascadia Code";
+}
+
+h2
+{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    padding: 0 2em;
+}
+
+p
+{
+    font-size: 1em;
+}
+
+#avatar
+{
+	margin: 0 auto;
+    display: block;
+	clip-path: circle();
+	border-radius: 50%;
+	border: 6px solid white;
+    height: 8em;
+}
+
+.container
+{
+    position: absolute;
+    top: 50%;   
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#links
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    margin-top: 1.5em;
+    gap: 1.5em;
+}
+
+#links img
+{
+    height: 32px;
+    width: 32px;
+}
+
+footer
+{
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	bottom: 2em;
+	padding: 0 2em;
+    font-size: 0.9em
+}
+
+@media (min-width: 768px)
+{
+    img
+    {
+        height: 10em;
+    }
+
+    h1
+    {
+        font-size: 4em;
+        margin-top: 0.1em;
+    }
+
+    h2
+    {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    p
+    {
+        font-size: 1.25em;
+    }
+
+    #links
+    {
+        gap: 2.5em;
+    }
+
+    #links img
+    {
+        height: 42px;
+        width: 42px;
+    }
+}
