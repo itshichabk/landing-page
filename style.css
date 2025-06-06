@@ -154,6 +154,14 @@ footer
     font-size: 0.9em
 }
 
+#lang
+{
+  color: white;
+  position: absolute;
+  right: 2em;
+  top: 1em;
+}
+
 @media (min-width: 768px)
 {
     img
@@ -176,6 +184,11 @@ footer
     p
     {
         font-size: 1.25em;
+    }
+
+    p, #lang
+    {
+        font-size: 1.2em;
     }
 
     #links
