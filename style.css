@@ -140,6 +140,7 @@ p
 
 #links img
 {
+  object-fit: cover;
     height: 32px;
     width: 32px;
 }
